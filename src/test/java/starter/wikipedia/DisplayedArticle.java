@@ -1,0 +1,20 @@
+package starter.wikipedia;
+
+import net.serenitybdd.core.annotations.findby.By;
+import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.questions.Text;
+
+/**
+ * Represents information appearing on an article displayed on Wikipedia
+ */
+public class DisplayedArticle {
+
+    public static Question<String> firstHeading() {
+
+        return Text.of("#firstHeading");
+    }
+    public static Question<String> read() {
+
+        return Text.of(By.xpath("//span[text()='Read']"));
+    }
+}
